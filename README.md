@@ -1,4 +1,4 @@
-# Design Resource Navigation(设计资源导航)
+# Design Resource Navigation
 
 **Jeanine Zhuang的设计资源导航**
 
