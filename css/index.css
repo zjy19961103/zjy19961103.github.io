@@ -1,0 +1,200 @@
+#body-main {
+    /*background-color: rgb(127,168,190);*/
+    /*background-color: rgb(115,181,255);*/
+    background-color: #6666CB;
+    /*background-color: #333333;*/
+    text-align: center;
+    width: 1200px;
+    margin: 0px auto;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "Microsoft Yahei", "sans-serif";
+}
+
+h1 {
+    color: #222222;
+}
+
+h3 {
+    color: #222222;
+}
+/* 未访问的链接 */
+a:link {
+    color: #FFFFFF;
+}
+
+/* 已访问的链接 */
+a:visited {
+    color: #FFFFFF;
+}
+
+/* 鼠标移动到链接上 */
+a:hover {
+    color: #6ECC52;
+}
+
+#h11 {
+    height: 3px;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+}
+
+#h22 {
+    height: 2px;
+    border: 1px solid rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+    margin-top: 14px;
+    margin-bottom: 0px;
+}
+
+#link {
+    width: 704px;
+    height: 68px;
+    margin: 10px auto;
+}
+
+.icon {
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 0px auto;
+}
+
+.link1 {
+    background-image: url("../images/group-link.png");
+    background-position: -544px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link1:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -544px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link2 {
+    background-image: url("../images/group-link.png");
+    background-position: -68px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link2:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -68px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link3 {
+    background-image: url("../images/group-link.png");
+    background-position: -136px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link3:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -136px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link4 {
+    background-image: url("../images/group-link.png");
+    background-position: -204px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link4:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -204px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link5 {
+    background-image: url("../images/group-link.png");
+    background-position: -272px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link5:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -272px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link6 {
+    background-image: url("../images/group-link.png");
+    background-position: -340px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link6:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -340px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link7 {
+    background-image: url("../images/group-link.png");
+    background-position: -408px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link7:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -408px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link8 {
+    background-image: url("../images/group-link.png");
+    background-position: -476px 0px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+.link8:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -476px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0px 10px;
+}
+
+#copyright {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
