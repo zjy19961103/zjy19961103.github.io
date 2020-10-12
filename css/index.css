@@ -16,6 +16,11 @@ h1 {
 h3 {
     color: #222222;
 }
+
+a {
+    text-decoration:none;
+}
+
 /* 未访问的链接 */
 a:link {
     color: #FFFFFF;
