@@ -19,6 +19,8 @@ h3 {
 
 a {
     text-decoration:none;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 /* 未访问的链接 */
