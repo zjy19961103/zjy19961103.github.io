@@ -1,0 +1,205 @@
+#body-main {
+    background-color: #6666CB;
+    text-align: center;
+    width: 1366px;
+    margin: 0 auto;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "Microsoft Yahei", "sans-serif";
+}
+
+#p10 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #111111;
+}
+
+.p11 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #111111;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+/* 未访问的链接 */
+a:link {
+    color: #FFFFFF;
+}
+
+/* 已访问的链接 */
+a:visited {
+    color: #FFFFFF;
+}
+
+/* 鼠标移动到链接上 */
+a:hover {
+    color: #77ff33;
+}
+
+#h10 {
+    height: 3px;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: none;
+    border-right: none;
+}
+
+#h11 {
+    height: 2px;
+    border: 1px solid #FFFFFF;
+    border-left: none;
+    border-right: none;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+#link {
+    width: 704px;
+    height: 68px;
+    margin: 10px auto;
+}
+
+.icon {
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 0 auto;
+}
+
+.link1 {
+    background-image: url("../images/group-link.png");
+    background-position: -544px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link1:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -544px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link2 {
+    background-image: url("../images/group-link.png");
+    background-position: -68px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link2:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -68px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link3 {
+    background-image: url("../images/group-link.png");
+    background-position: -136px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link3:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -136px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link4 {
+    background-image: url("../images/group-link.png");
+    background-position: -204px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link4:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -204px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link5 {
+    background-image: url("../images/group-link.png");
+    background-position: -272px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link5:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -272px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link6 {
+    background-image: url("../images/group-link.png");
+    background-position: -340px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link6:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -340px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link7 {
+    background-image: url("../images/group-link.png");
+    background-position: -408px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link7:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -408px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link8 {
+    background-image: url("../images/group-link.png");
+    background-position: -476px 0;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.link8:hover {
+    background-image: url("../images/group-link.png");
+    background-position: -476px -68px;
+    width: 68px;
+    height: 68px;
+    margin: 0 10px;
+}
+
+#copyright {
+    margin: 20px auto;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+}
