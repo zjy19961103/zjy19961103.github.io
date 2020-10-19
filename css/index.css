@@ -1,5 +1,6 @@
 #body-main {
-    background-color: #6666CB;
+    /*background-color: #6666CB;*/
+    background-image: url("../images/background-index.png");
     text-align: center;
     width: 1200px;
     margin: 0 auto;
