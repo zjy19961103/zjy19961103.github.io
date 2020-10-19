@@ -17,8 +17,8 @@ var RAF = (function () {
 var warea = {x: null, y: null, max: 20000};
 window.onmousemove = function (e) {
     e = e || window.event;
-    warea.x = e.clientX;
-    warea.y = e.clientY;
+    warea.x = e.clientX + 10;
+    warea.y = e.clientY - 32;
 };
 window.onmouseout = function (e) {
     warea.x = null;
@@ -27,7 +27,20 @@ window.onmouseout = function (e) {
 // 添加粒子
 // x，y为粒子坐标，xa, ya为粒子xy轴加速度，max为连线的最大距离
 var dots = [];
-for (var i = 0; i < 70; i++) {
+window.onclick = function () {
+    var x = warea.x;
+    var y = warea.y;
+    var xa = Math.random() * 3 - 1;
+    var ya = Math.random() * 3 - 1;
+    dots.push({
+        x: x,
+        y: y,
+        xa: xa,
+        ya: ya,
+        max: 16000
+    })
+}
+for (var i = 0; i < 100; i++) {
     var x = Math.random() * canvas.width;
     var y = Math.random() * canvas.height;
     var xa = Math.random() * 3 - 1;
@@ -58,8 +71,15 @@ function animate() {
         dot.xa *= (dot.x > canvas.width || dot.x < 0) ? -1 : 1;
         dot.ya *= (dot.y > canvas.height || dot.y < 0) ? -1 : 1;
         // 绘制点
-        ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 3, 3);
+        // ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 3, 3);
+        ctx.beginPath();
+        ctx.arc(dot.x - 0.5, dot.y - 0.5, 2, 0, 2 * Math.PI);
         ctx.fillStyle = "#ffff80";
+        // ctx.fillStyle = "#80ffff";
+        // ctx.fillStyle = "#80aaff";
+        // ctx.fillStyle = "#d580ff";
+        ctx.fill();
+        ctx.closePath();
         // 循环比对粒子间的距离
         for (var i = 0; i < ndots.length; i++) {
             var d2 = ndots[i];
@@ -93,122 +113,3 @@ function animate() {
     });
     RAF(animate);
 }
-
-
-// var canvasPage3 = document.getElementById("cas");
-// canvasPage3.width = 1600;
-// canvasPage3.height = 770;
-// var ctx = canvasPage3.getContext("2d");
-// var zhongX = 800;
-// var zhongY = 385;
-//
-// function randomNum(x, y) {
-//     return Math.floor(Math.random() * (y - x + 1) + x);
-// }
-//
-// function randomColor() {
-//     return "rgb(" + randomNum(0, 255) + "," + randomNum(0, 255) + "," + randomNum(0, 255) + ")";
-// }
-//
-// function Ball() {
-//     this.r = randomNum(0.1, 2);
-//     this.color = "#ffff80";
-//
-//     this.x = randomNum(this.r, canvasPage3.width - this.r);
-//     this.y = randomNum(this.r, canvasPage3.height - this.r);
-//
-//     this.speedX = randomNum(1, 3) * (randomNum(0, 1) ? 1 : -1);
-//     this.speedY = randomNum(1, 3) * (randomNum(0, 1) ? 1 : -1);
-// }
-//
-// Ball.prototype.move = function () {
-//     this.x += this.speedX * 0.2;
-//     this.y += this.speedY * 0.2;
-//
-//     if (this.x <= this.r) {
-//         this.x = this.r;
-//         this.speedX *= -1;
-//     }
-//     if (this.x >= canvasPage3.width - this.r) {
-//         this.x = canvasPage3.width - this.r
-//         this.speedX *= -1;
-//     }
-//     //小球碰到上边界的处理 反弹
-//     if (this.y <= this.r) {
-//         this.y = this.r;
-//         //反弹
-//         this.speedY *= -1;
-//     }
-//     //小球碰到下边界的处理 反弹
-//     if (this.y >= canvasPage3.height - this.r) {
-//         this.y = canvasPage3.height - this.r;
-//         //反弹
-//         this.speedY *= -1;
-//     }
-// }
-//
-// Ball.prototype.draw = function () {
-//     ctx.beginPath();
-//     ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
-//     ctx.fillStyle = this.color;
-//     ctx.fill();
-// }
-//
-// var balls = [];
-// var arr = [];
-// for (var i = 0; i < 0.0002 * canvasPage3.width * canvasPage3.height; i++) {
-//     var ball = new Ball();
-//     balls.push(ball);
-// }
-//
-// setInterval(function () {
-//     arr = [];
-//     ctx.clearRect(0, 0, canvasPage3.width, canvasPage3.height);
-//     for (var i = 0; i < balls.length; i++) {
-//         balls[i].move();
-//         balls[i].draw();
-//         if (ballAndMouse(balls[i]) < 130) {
-//             ctx.lineWidth = (130 - ballAndMouse(balls[i])) * 1.5 / 130;
-//             ctx.beginPath();
-//             ctx.moveTo(balls[i].x, balls[i].y);
-//             ctx.lineTo(zhongX, zhongY);
-//             ctx.strokeStyle = balls[i].color;
-//             ctx.stroke();
-//         }
-//     }
-//
-//
-//     for (var i = 0; i < balls.length; i++) {
-//         for (var j = 0; j < balls.length; j++) {
-//             if (ballAndBall(balls[i], balls[j]) < 80) {
-//                 ctx.lineWidth = (80 - ballAndBall(balls[i], balls[j])) * 0.6 / 80;
-//                 ctx.globalAlpha = (130 - ballAndBall(balls[i], balls[j])) / 80;
-//                 ctx.beginPath();
-//                 ctx.moveTo(balls[i].x, balls[i].y);
-//                 ctx.lineTo(balls[j].x, balls[j].y);
-//                 ctx.strokeStyle = balls[i].color;
-//                 ctx.stroke();
-//             }
-//         }
-//     }
-//     ctx.globalAlpha = 1.0;
-//
-// }, 30);
-//
-// canvasPage3.onmousemove = function (event) {
-//     event = event || window.event;
-//     zhongX = event.offsetX;
-//     zhongY = event.offsetY;
-// }
-//
-// function ballAndMouse(obj) {
-//     var disX = Math.abs(zhongX - obj.x);
-//     var disY = Math.abs(zhongY - obj.y);
-//     return Math.sqrt(disX * disX + disY * disY);
-// }
-//
-// function ballAndBall(obj1, obj2) {
-//     var disX = Math.abs(obj1.x - obj2.x);
-//     var disY = Math.abs(obj1.y - obj2.y);
-//     return Math.sqrt(disX * disX + disY * disY);
-// }
