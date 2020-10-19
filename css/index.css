@@ -4,7 +4,7 @@
     background: linear-gradient(#7373e5, #5959b3);
     /*background-image: url("../images/background-index.png");*/
     /*text-align: center;*/
-    width: 1200px;
+    width: auto;
     margin: 0 auto;
     font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "Microsoft Yahei", "sans-serif";
 }
@@ -53,6 +53,8 @@ a:hover {
 }
 
 .a10 {
+    width: 1000px;
+    margin: 0 auto;
     font-size: 18px;
     text-align: center;
     line-height: 200%;
